@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platinum Solutions Inc | Business Funding &amp; Credit Repair</title>
+  <meta name="description" content="Platinum Solutions Inc provides business funding and credit repair solutions with access to 300+ lenders and multiple offers through one streamlined application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#0a0a0a',
+            card: '#111111',
+            secondary: 'rgba(255,255,255,0.05)',
+            gold: '#c5a55a',
+            softgold: '#e8d5a3',
+            deepgold: '#8b7335'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          },
+          boxShadow: {
+            glow: '0 24px 80px rgba(197, 165, 90, 0.18)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --background: #0a0a0a;
+      --card: #111111;
+      --secondary: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.1);
+      --text-muted: rgba(255, 255, 255, 0.72);
+      --gold-gradient: linear-gradient(135deg, #c5a55a 0%, #e8d5a3 25%, #c5a55a 50%, #8b7335 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(197, 165, 90, 0.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(232, 213, 163, 0.08), transparent 18%),
+        linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 35%, #090909 100%);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gold-gradient {
+      background: var(--gold-gradient);
+    }
+
+    .gold-text {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .glass {
+      background: rgba(17, 17, 17, 0.72);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    }
+
+    .section-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent 20%, transparent 80%, rgba(255,255,255,0.03));
+      pointer-events: none;
+    }
+
+    .grid-glow::after {
+      content: '';
+      position: absolute;
+      inset: auto -10% -30% auto;
+      width: 26rem;
+      height: 26rem;
+      background: radial-gradient(circle, rgba(197,165,90,0.16), transparent 68%);
+      filter: blur(16px);
+      pointer-events: none;
+    }
+
+    .ornament {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.7), transparent 92%);
+      pointer-events: none;
+    }
+
+    .card-border {
+      position: relative;
+    }
+
+    .card-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: inherit;
+      background: linear-gradient(145deg, rgba(232,213,163,0.28), rgba(255,255,255,0.08), rgba(197,165,90,0.24));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .field {
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.95rem 1rem;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .field:focus {
+      border-color: rgba(232, 213, 163, 0.65);
+      box-shadow: 0 0 0 4px rgba(197, 165, 90, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .field::placeholder {
+      color: rgba(255, 255, 255, 0.42);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-background selection:bg-gold/30 selection:text-white">
+  <div class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <header class="glass mx-auto max-w-7xl rounded-full">
+      <div class="flex items-center justify-between gap-6 px-6 py-4 lg:px-8">
+        <a href="#home" class="flex items-center gap-3">
+          <div class="gold-gradient flex h-11 w-11 items-center justify-center rounded-full text-base font-extrabold text-black">PS</div>
+          <div>
+            <div class="font-display text-lg font-bold tracking-[0.16em] text-white">PLATINUM SOLUTIONS</div>
+            <div class="text-xs uppercase tracking-[0.28em] text-white/50">Business Funding</div>
+          </div>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm font-medium text-white/72 lg:flex">
+          <a href="#home" class="transition hover:text-white">Home</a>
+          <a href="#funding-products" class="transition hover:text-white">Funding Products</a>
+          <a href="#industries" class="transition hover:text-white">Industries</a>
+          <a href="#success-stories" class="transition hover:text-white">Success Stories</a>
+          <a href="#apply" class="transition hover:text-white">Apply Now</a>
+        </nav>
+        <a href="#apply" class="gold-gradient hidden rounded-full px-5 py-3 text-sm font-semibold text-black shadow-glow transition hover:scale-[1.02] lg:inline-flex">Apply Now</a>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section id="home" class="section-shell grid-glow relative overflow-hidden px-4 pb-20 pt-36 sm:pt-40">
+      <div class="ornament"></div>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+          <div class="reveal relative z-10">
+            <div class="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-softgold">
+              Your Guides From Start To Funded
+            </div>
+            <h1 class="font-display max-w-4xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+              Reimagine The Way You <span class="gold-text">Access Capital</span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/68">
+              Get a quote with 1 application, access 300+ lenders, and receive multiple offers. Platinum Solutions Inc provides business funding and credit repair solutions to help your business grow.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="#apply" class="gold-gradient inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black shadow-glow">
+                Get Funding
+              </a>
+              <a href="#funding-products" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-softgold/50 hover:bg-white/8">
+                Explore Products
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal relative z-10">
+            <div class="card-border glass rounded-[2rem] p-7 sm:p-8">
+              <div class="mb-8 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-semibold uppercase tracking-[0.3em] text-softgold">Get Funding</div>
+                  <h2 class="mt-3 font-display text-3xl font-bold text-white">Tailored Capital Solutions</h2>
+                </div>
+                <div class="gold-gradient rounded-2xl p-3 text-black shadow-glow">
+                  <i data-lucide="badge-dollar-sign" class="h-7 w-7"></i>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div class="flex items-center gap-4">
+                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                      <i data-lucide="landmark" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Access</div>
+                      <div class="mt-1 text-lg font-semibold text-white">300+ lenders and 5000+ products</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div class="flex items-center gap-4">
+                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                      <i data-lucide="clock-3" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Speed</div>
+                      <div class="mt-1 text-lg font-semibold text-white">Approvals and funding in as soon as 24-48 hrs</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div class="flex items-center gap-4">
+                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                      <i data-lucide="shield-check" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Support</div>
+                      <div class="mt-1 text-lg font-semibold text-white">Strategic guidance from application through closing</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8 rounded-2xl border border-softgold/25 bg-gradient-to-r from-[#17140b] to-[#131313] p-5">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <div class="text-sm uppercase tracking-[0.24em] text-softgold">Direct Contact</div>
+                    <div class="mt-2 text-base font-semibold text-white">Cole | +1 (815) 280-3370</div>
+                    <div class="mt-1 text-sm text-white/65">jcole.boban@gmail.com</div>
+                  </div>
+                  <a href="#apply" class="gold-gradient rounded-full px-5 py-3 text-sm font-semibold text-black">Check Eligibility</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 pb-20">
+      <div class="mx-auto grid max-w-7xl gap-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
+          <div class="text-4xl font-bold gold-text">300+</div>
+          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Lending Partners</div>
+        </div>
+        <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
+          <div class="text-4xl font-bold gold-text">5000+</div>
+          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Financial Products</div>
+        </div>
+        <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
+          <div class="text-4xl font-bold gold-text">$10M+</div>
+          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Funding Available</div>
+        </div>
+        <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
+          <div class="text-4xl font-bold gold-text">24-48</div>
+          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Hours To Fund</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal max-w-3xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Four Simple Steps To Funding</div>
+          <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">A proven process designed for speed, clarity, and the right fit.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="reveal card-border glass rounded-[2rem] p-7">
+            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">1</div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Apply Online</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Fill out our streamlined application and tell us about your business goals, timing, and capital needs.</p>
+          </article>
+          <article class="reveal card-border glass rounded-[2rem] p-7">
+            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">2</div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Meet Your Advisor</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Your advisor reviews your profile, explains options, and aligns solutions with your business model.</p>
+          </article>
+          <article class="reveal card-border glass rounded-[2rem] p-7">
+            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">3</div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Customized Plan</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Receive competitive offers, flexible terms, and a strategic recommendation built around your use case.</p>
+          </article>
+          <article class="reveal card-border glass rounded-[2rem] p-7">
+            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">4</div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Get Funded</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Move through closing quickly and receive capital in as soon as 24 to 48 hours once approved.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal max-w-3xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Industries We Serve</div>
+          <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Customized funding solutions for businesses across thousands of industries.</h2>
+          <p class="mt-5 text-lg leading-8 text-white/64">We work with all types of small businesses. Below is a partial list of industries where we help secure capital through our lending network.</p>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">E-Commerce</h3><p class="mt-3 text-sm leading-7 text-white/62">Flexible capital for inventory, fulfillment, growth campaigns, and operational efficiency.</p></article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Real Estate</h3><p class="mt-3 text-sm leading-7 text-white/62">Funding for acquisitions, renovations, bridge needs, and portfolio expansion strategies.</p></article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Trucking</h3><p class="mt-3 text-sm leading-7 text-white/62">Solutions for fleet growth, repairs, working capital, and transportation operations.</p></article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Construction</h3><p class="mt-3 text-sm leading-7 text-white/62">Capital to take on larger jobs, manage labor, and fund equipment or materials.</p></article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Restaurants</h3><p class="mt-3 text-sm leading-7 text-white/62">Support for renovations, second locations, equipment purchases, and cash flow stability.</p></article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Landscaping</h3><p class="mt-3 text-sm leading-7 text-white/62">Financing for seasonal growth, crews, trucks, trailers, and commercial contracts.</p></article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Consultants</h3><p class="mt-3 text-sm leading-7 text-white/62">Working capital for hiring, delivery capacity, technology upgrades, and expansion.</p></article>
+          <article class="reveal rounded-[2rem] border border-dashed border-softgold/35 bg-gradient-to-br from-[#17140b] to-[#101010] p-6"><h3 class="text-xl font-semibold text-white">Don't See Your Industry?</h3><p class="mt-3 text-sm leading-7 text-white/62">That is okay. There is a strong chance we have already helped businesses in your space secure funding.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funding-products" class="section-shell px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-3xl">
+            <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Funding Products</div>
+            <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Access over 5000+ different lending products and strategic funding solutions.</h2>
+          </div>
+          <div class="rounded-[1.5rem] border border-softgold/25 bg-white/[0.03] px-6 py-4 text-sm text-white/66">
+            <div class="font-semibold text-white">Check Your Eligibility</div>
+            <div class="mt-1">*700+ credit score required</div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-5 lg:grid-cols-2">
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Business Line of Credit</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Lines up to $1,000,000</p><p class="mt-4 text-sm leading-7 text-white/64">A flexible revolving safety net that lets you draw only what you need and repay on your timeline for cash flow, inventory, or growth.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">0% Strategic Financing</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">$5,000 - $300,000+</p><p class="mt-4 text-sm leading-7 text-white/64">A strategic combination of cards, lines, and lending products designed to keep capital affordable and flexible.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Business Term Loans</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Funding up to $5 Million</p><p class="mt-4 text-sm leading-7 text-white/64">Predictable repayment structures for expansion, debt consolidation, hiring, equipment purchases, or large one-time investments.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">SBA Loans</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Loans up to $10 Million</p><p class="mt-4 text-sm leading-7 text-white/64">Government-backed options built for working capital, acquisitions, real estate projects, and major fixed-asset investments.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Revenue-Based Financing</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Funding up to $10 Million</p><p class="mt-4 text-sm leading-7 text-white/64">Repayment options aligned with top-line revenue for businesses that need flexible structures tied to sales performance.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Start-Up / Working Capital</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Built for operating needs</p><p class="mt-4 text-sm leading-7 text-white/64">Working capital programs for launch costs, seasonal changes, payroll, project execution, and day-to-day operating needs.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Equipment Financing</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Industry-specific options</p><p class="mt-4 text-sm leading-7 text-white/64">Use financing to acquire vehicles, machinery, technology, and specialized equipment without straining cash reserves.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Real Estate / DSCR Loans</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Investor-focused structures</p><p class="mt-4 text-sm leading-7 text-white/64">Solutions for investment properties, DSCR-based approvals, bridge deals, rental portfolios, and time-sensitive closings.</p></article>
+        </div>
+        <div class="mt-10">
+          <a href="#apply" class="gold-gradient inline-flex rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-black">Check Your Eligibility</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal max-w-3xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Testimonials</div>
+          <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Hear from our amazing clients.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-7">
+            <div class="mb-5 text-softgold">01</div>
+            <p class="text-base leading-8 text-white/72">"Trailhead 8 really understood the challenges we were facing as a growing e-commerce business. They helped us get a line of credit that gave us flexibility with inventory and marketing. What stood out was their personal touch, they genuinely cared about our success, not just the numbers."</p>
+            <div class="mt-6 border-t border-white/8 pt-5 text-sm text-white/56">Jason, Co-Founder of NextGen Apparel</div>
+          </article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-7">
+            <div class="mb-5 text-softgold">02</div>
+            <p class="text-base leading-8 text-white/72">"As a marketing consultant, I needed funding to expand my digital services and hire a few key team members. Trailhead 8 stepped in with a flexible financing package that fit my exact needs. With their help, I doubled my team, increased my client base, and grew revenue by 40% in less than a year. Their strategic funding made all the difference for my business."</p>
+            <div class="mt-6 border-t border-white/8 pt-5 text-sm text-white/56">Michelle, Owner of Dynamic Solutions</div>
+          </article>
+          <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-7">
+            <div class="mb-5 text-softgold">03</div>
+            <p class="text-base leading-8 text-white/72">"After landing a big project, we needed immediate capital to scale up, and Trailhead 8 helped us get the funding we needed through a term loan. It wasn't just about the money, they worked with us to make sure the loan terms were manageable for the long term. It gave us the confidence to move forward without hesitation."</p>
+            <div class="mt-6 border-t border-white/8 pt-5 text-sm text-white/56">Mark, Owner of SkyBuild Construction</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="success-stories" class="section-shell px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal max-w-3xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Success Stories</div>
+          <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Celebrating the success of businesses we've been honored to help.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 xl:grid-cols-3">
+          <article class="reveal card-border glass rounded-[2rem] p-8">
+            <div class="text-sm uppercase tracking-[0.24em] text-softgold">Interior Designer</div>
+            <h3 class="mt-4 text-3xl font-semibold text-white">Expansion</h3>
+            <p class="mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-white/48">LuxeSpaces Interior Design</p>
+            <p class="mt-5 text-sm leading-7 text-white/64">Funding need: expansion, hiring staff, and purchasing equipment. A $75,000 0% financing strategy helped the firm scale for larger projects and increase revenue by 45% within 6 months.</p>
+          </article>
+          <article class="reveal card-border glass rounded-[2rem] p-8">
+            <div class="text-sm uppercase tracking-[0.24em] text-softgold">Real Estate</div>
+            <h3 class="mt-4 text-3xl font-semibold text-white">Speed Funding</h3>
+            <p class="mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-white/48">Sarah, Real Estate Investor</p>
+            <p class="mt-5 text-sm leading-7 text-white/64">Funding need: quick capital for property deals and renovations. A $200,000 0% financing structure supported rapid closings, renovations, and a 35% improvement in portfolio ROI.</p>
+          </article>
+          <article class="reveal card-border glass rounded-[2rem] p-8">
+            <div class="text-sm uppercase tracking-[0.24em] text-softgold">Restaurant</div>
+            <h3 class="mt-4 text-3xl font-semibold text-white">Second Location</h3>
+            <p class="mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-white/48">Bella's Bistro</p>
+            <p class="mt-5 text-sm leading-7 text-white/64">Funding need: open a second location and purchase equipment. A $150,000 blend of 0% cards, lines, and equipment financing helped launch smoothly and increase total revenue by 30% within 6 months.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="apply" class="px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-[0.88fr_1.12fr]">
+          <div class="reveal card-border glass rounded-[2rem] p-8 sm:p-10">
+            <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Apply Now</div>
+            <h2 class="mt-5 font-display text-4xl font-bold text-white">Check your eligibility with one application.</h2>
+            <p class="mt-5 text-lg leading-8 text-white/64">Platinum Solutions Inc helps business owners compare options across a broad lending network without wasting time on fragmented applications.</p>
+            <div class="mt-10 space-y-5 text-sm text-white/64">
+              <div class="flex items-start gap-4">
+                <div class="gold-gradient mt-1 flex h-10 w-10 items-center justify-center rounded-2xl text-black"><i data-lucide="phone" class="h-5 w-5"></i></div>
+                <div><div class="font-semibold text-white">Cole</div><div>+1 (815) 280-3370</div></div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="gold-gradient mt-1 flex h-10 w-10 items-center justify-center rounded-2xl text-black"><i data-lucide="mail" class="h-5 w-5"></i></div>
+                <div><div class="font-semibold text-white">Email</div><div>jcole.boban@gmail.com</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal card-border glass rounded-[2rem] p-8 sm:p-10">
+            <form class="grid gap-5 sm:grid-cols-2" action="#" method="post">
+              <div class="sm:col-span-2">
+                <label class="mb-2 block text-sm font-medium text-white/70" for="amount">How Much Money Do You Need*</label>
+                <select id="amount" name="amount" class="field" required>
+                  <option value="">Choose one</option>
+                  <option>$10,000 - $50,000</option>
+                  <option>$50,000 - $100,000</option>
+                  <option>$100,000 - $250,000</option>
+                  <option>$250,000 - $500,000</option>
+                  <option>$500,000+</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="mb-2 block text-sm font-medium text-white/70" for="name">Full Name*</label>
+                <input id="name" name="name" class="field" type="text" placeholder="Your full name" required>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-white/70" for="email">Email*</label>
+                <input id="email" name="email" class="field" type="email" placeholder="you@example.com" required>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-white/70" for="phone">Phone*</label>
+                <input id="phone" name="phone" class="field" type="tel" placeholder="(555) 555-5555" required>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-white/70" for="credit-score">Credit Score*</label>
+                <select id="credit-score" name="credit_score" class="field" required>
+                  <option value="">Choose one</option>
+                  <option>700+</option>
+                  <option>660-699</option>
+                  <option>620-659</option>
+                  <option>Below 620</option>
+                </select>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-white/70" for="address">Business Address*</label>
+                <input id="address" name="address" class="field" type="text" placeholder="Street, City, State" required>
+              </div>
+              <label class="sm:col-span-2 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm leading-7 text-white/62">
+                <input type="checkbox" name="sms_consent" class="mt-1 h-4 w-4 rounded border-white/20 bg-transparent text-gold focus:ring-gold" required>
+                <span>I agree to receive SMS and email communications from Platinum Solutions Inc regarding my funding inquiry, application updates, and related services.</span>
+              </label>
+              <div class="sm:col-span-2">
+                <button type="submit" class="gold-gradient w-full rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-black shadow-glow">Check Eligibility</button>
+                <p class="mt-4 text-center text-sm text-white/52">Applying is free and will not impact your credit. *700+ credit score required</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/8 px-4 py-16">
+    <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-full text-base font-extrabold text-black">PS</div>
+          <div>
+            <div class="font-display text-xl font-bold tracking-[0.12em] text-white">Platinum Solutions Inc</div>
+            <div class="text-xs uppercase tracking-[0.3em] text-white/46">Business Funding &amp; Credit Repair</div>
+          </div>
+        </div>
+        <p class="mt-6 max-w-md text-sm leading-7 text-white/58">Strategic funding guidance, streamlined applications, and access to a broad lender network built to help businesses grow with confidence.</p>
+        <div class="mt-6 space-y-2 text-sm text-white/62">
+          <div>Cole | +1 (815) 280-3370</div>
+          <div>jcole.boban@gmail.com</div>
+        </div>
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="Facebook" class="rounded-full border border-white/10 p-3 text-white/62 transition hover:border-softgold/40 hover:text-white"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+          <a href="#" aria-label="Instagram" class="rounded-full border border-white/10 p-3 text-white/62 transition hover:border-softgold/40 hover:text-white"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+          <a href="#" aria-label="LinkedIn" class="rounded-full border border-white/10 p-3 text-white/62 transition hover:border-softgold/40 hover:text-white"><i data-lucide="linkedin" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-softgold">Funding Products</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/58">
+          <li><a href="#funding-products" class="transition hover:text-white">Business Line of Credit</a></li>
+          <li><a href="#funding-products" class="transition hover:text-white">0% Strategic Financing</a></li>
+          <li><a href="#funding-products" class="transition hover:text-white">Business Term Loans</a></li>
+          <li><a href="#funding-products" class="transition hover:text-white">SBA Loans</a></li>
+          <li><a href="#funding-products" class="transition hover:text-white">Equipment Financing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-softgold">Company</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/58">
+          <li><a href="#home" class="transition hover:text-white">Home</a></li>
+          <li><a href="#industries" class="transition hover:text-white">Industries</a></li>
+          <li><a href="#success-stories" class="transition hover:text-white">Success Stories</a></li>
+          <li><a href="#apply" class="transition hover:text-white">Apply Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-softgold">Resources</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/58">
+          <li><a href="#apply" class="transition hover:text-white">Get a Quote Today</a></li>
+          <li><a href="#" class="transition hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="transition hover:text-white">Accessibility Statement</a></li>
+          <li><a href="mailto:jcole.boban@gmail.com" class="transition hover:text-white">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mx-auto mt-12 max-w-7xl border-t border-white/8 pt-6 text-sm text-white/42">
+      <span id="year"></span> Platinum Solutions Inc. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+  </script>
+</body>
+</html>
