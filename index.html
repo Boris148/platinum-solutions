@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Platinum Solutions Inc | Business Funding &amp; Credit Repair</title>
-  <meta name="description" content="Platinum Solutions Inc provides business funding and credit repair solutions with access to 300+ lenders and multiple offers through one streamlined application.">
+  <title>Platinum Solutions Inc | Credit Repair &amp; Business Funding</title>
+  <meta name="description" content="Platinum Solutions Inc provides expert credit repair solutions to rebuild your financial future, plus access to 300+ lenders for business funding when you are ready to grow.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
@@ -17,16 +17,16 @@
             background: '#0a0a0a',
             card: '#111111',
             secondary: 'rgba(255,255,255,0.05)',
-            gold: '#c5a55a',
-            softgold: '#e8d5a3',
-            deepgold: '#8b7335'
+            gold: '#C0C0C0',
+            softgold: '#D4D4D8',
+            deepgold: '#71717A'
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             display: ['Playfair Display', 'serif']
           },
           boxShadow: {
-            glow: '0 24px 80px rgba(197, 165, 90, 0.18)'
+            glow: '0 24px 80px rgba(192, 192, 192, 0.18)'
           }
         }
       }
@@ -39,7 +39,7 @@
       --secondary: rgba(255, 255, 255, 0.05);
       --border: rgba(255, 255, 255, 0.1);
       --text-muted: rgba(255, 255, 255, 0.72);
-      --gold-gradient: linear-gradient(135deg, #c5a55a 0%, #e8d5a3 25%, #c5a55a 50%, #8b7335 100%);
+      --gold-gradient: linear-gradient(135deg, #C0C0C0 0%, #E4E4E7 25%, #A1A1AA 50%, #71717A 100%);
     }
 
     html {
@@ -48,8 +48,8 @@
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(197, 165, 90, 0.12), transparent 24%),
-        radial-gradient(circle at top right, rgba(232, 213, 163, 0.08), transparent 18%),
+        radial-gradient(circle at top left, rgba(192, 192, 192, 0.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(212, 212, 216, 0.08), transparent 18%),
         linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 35%, #090909 100%);
       color: #fff;
       font-family: 'Inter', sans-serif;
@@ -92,7 +92,7 @@
       inset: auto -10% -30% auto;
       width: 26rem;
       height: 26rem;
-      background: radial-gradient(circle, rgba(197,165,90,0.16), transparent 68%);
+      background: radial-gradient(circle, rgba(192, 192, 192, 0.16), transparent 68%);
       filter: blur(16px);
       pointer-events: none;
     }
@@ -118,7 +118,7 @@
       inset: 0;
       padding: 1px;
       border-radius: inherit;
-      background: linear-gradient(145deg, rgba(232,213,163,0.28), rgba(255,255,255,0.08), rgba(197,165,90,0.24));
+      background: linear-gradient(145deg, rgba(212, 212, 216, 0.28), rgba(255,255,255,0.08), rgba(161, 161, 170, 0.24));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -137,8 +137,8 @@
     }
 
     .field:focus {
-      border-color: rgba(232, 213, 163, 0.65);
-      box-shadow: 0 0 0 4px rgba(197, 165, 90, 0.12);
+      border-color: rgba(212, 212, 216, 0.65);
+      box-shadow: 0 0 0 4px rgba(192, 192, 192, 0.12);
       background: rgba(255, 255, 255, 0.06);
     }
 
@@ -163,20 +163,22 @@
     <header class="glass mx-auto max-w-7xl rounded-full">
       <div class="flex items-center justify-between gap-6 px-6 py-4 lg:px-8">
         <a href="#home" class="flex items-center gap-3">
+          <!-- LOGO: Replace this div with <img> when Cole provides logo -->
           <div class="gold-gradient flex h-11 w-11 items-center justify-center rounded-full text-base font-extrabold text-black">PS</div>
           <div>
             <div class="font-display text-lg font-bold tracking-[0.16em] text-white">PLATINUM SOLUTIONS</div>
-            <div class="text-xs uppercase tracking-[0.28em] text-white/50">Business Funding</div>
+            <div class="text-xs uppercase tracking-[0.28em] text-white/50">Credit Repair &amp; Funding</div>
           </div>
         </a>
         <nav class="hidden items-center gap-8 text-sm font-medium text-white/72 lg:flex">
           <a href="#home" class="transition hover:text-white">Home</a>
+          <a href="#credit-repair-services" class="transition hover:text-white">Credit Repair</a>
           <a href="#funding-products" class="transition hover:text-white">Funding Products</a>
           <a href="#industries" class="transition hover:text-white">Industries</a>
           <a href="#success-stories" class="transition hover:text-white">Success Stories</a>
           <a href="#apply" class="transition hover:text-white">Apply Now</a>
         </nav>
-        <a href="#apply" class="gold-gradient hidden rounded-full px-5 py-3 text-sm font-semibold text-black shadow-glow transition hover:scale-[1.02] lg:inline-flex">Apply Now</a>
+        <a href="#apply" class="gold-gradient hidden rounded-full px-5 py-3 text-sm font-semibold text-black shadow-glow transition hover:scale-[1.02] lg:inline-flex">Free Consultation</a>
       </div>
     </header>
   </div>
@@ -188,20 +190,20 @@
         <div class="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
           <div class="reveal relative z-10">
             <div class="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-softgold">
-              Your Guides From Start To Funded
+              Your Guides From Repair To Funding
             </div>
             <h1 class="font-display max-w-4xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              Reimagine The Way You <span class="gold-text">Access Capital</span>
+              Reimagine The Way You <span class="gold-text">Build Your Credit</span>
             </h1>
             <p class="mt-6 max-w-2xl text-lg leading-8 text-white/68">
-              Get a quote with 1 application, access 300+ lenders, and receive multiple offers. Platinum Solutions Inc provides business funding and credit repair solutions to help your business grow.
+              Expert credit repair solutions to rebuild your financial future. Plus, access 300+ lenders for business funding when you need it. Platinum Solutions Inc helps you fix your credit and grow your business.
             </p>
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#apply" class="gold-gradient inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black shadow-glow">
-                Get Funding
+                Start Your Journey
               </a>
-              <a href="#funding-products" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-softgold/50 hover:bg-white/8">
-                Explore Products
+              <a href="#credit-repair-services" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-softgold/50 hover:bg-white/8">
+                Explore Services
               </a>
             </div>
           </div>
@@ -210,56 +212,56 @@
             <div class="card-border glass rounded-[2rem] p-7 sm:p-8">
               <div class="mb-8 flex items-center justify-between">
                 <div>
-                  <div class="text-xs font-semibold uppercase tracking-[0.3em] text-softgold">Get Funding</div>
-                  <h2 class="mt-3 font-display text-3xl font-bold text-white">Tailored Capital Solutions</h2>
+                  <div class="text-xs font-semibold uppercase tracking-[0.3em] text-softgold">Credit Repair &amp; Funding Solutions</div>
+                  <h2 class="mt-3 font-display text-3xl font-bold text-white">Build A Stronger Financial Profile</h2>
                 </div>
                 <div class="gold-gradient rounded-2xl p-3 text-black shadow-glow">
-                  <i data-lucide="badge-dollar-sign" class="h-7 w-7"></i>
+                  <i data-lucide="shield-check" class="h-7 w-7"></i>
                 </div>
               </div>
               <div class="space-y-4">
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <div class="flex items-center gap-4">
                     <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                      <i data-lucide="file-search" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Credit Repair</div>
+                      <div class="mt-1 text-lg font-semibold text-white">Detailed report analysis, disputes, and score-building strategies</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div class="flex items-center gap-4">
+                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                      <i data-lucide="eye" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Monitoring</div>
+                      <div class="mt-1 text-lg font-semibold text-white">Ongoing visibility into progress, protection, and next best actions</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div class="flex items-center gap-4">
+                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
                       <i data-lucide="landmark" class="h-6 w-6"></i>
                     </div>
                     <div>
-                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Access</div>
-                      <div class="mt-1 text-lg font-semibold text-white">300+ lenders and 5000+ products</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <div class="flex items-center gap-4">
-                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
-                      <i data-lucide="clock-3" class="h-6 w-6"></i>
-                    </div>
-                    <div>
-                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Speed</div>
-                      <div class="mt-1 text-lg font-semibold text-white">Approvals and funding in as soon as 24-48 hrs</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <div class="flex items-center gap-4">
-                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
-                      <i data-lucide="shield-check" class="h-6 w-6"></i>
-                    </div>
-                    <div>
-                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Support</div>
-                      <div class="mt-1 text-lg font-semibold text-white">Strategic guidance from application through closing</div>
+                      <div class="text-sm uppercase tracking-[0.24em] text-white/42">Funding Next</div>
+                      <div class="mt-1 text-lg font-semibold text-white">Once your profile improves, access 300+ lenders and 5000+ products</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="mt-8 rounded-2xl border border-softgold/25 bg-gradient-to-r from-[#17140b] to-[#131313] p-5">
+              <div class="mt-8 rounded-2xl border border-softgold/25 bg-gradient-to-r from-[#151515] to-[#101010] p-5">
                 <div class="flex items-center justify-between gap-4">
                   <div>
                     <div class="text-sm uppercase tracking-[0.24em] text-softgold">Direct Contact</div>
                     <div class="mt-2 text-base font-semibold text-white">Cole | +1 (815) 280-3370</div>
                     <div class="mt-1 text-sm text-white/65">jcole.boban@gmail.com</div>
                   </div>
-                  <a href="#apply" class="gold-gradient rounded-full px-5 py-3 text-sm font-semibold text-black">Check Eligibility</a>
+                  <a href="#apply" class="gold-gradient rounded-full px-5 py-3 text-sm font-semibold text-black">Free Consultation</a>
                 </div>
               </div>
             </div>
@@ -279,12 +281,12 @@
           <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Financial Products</div>
         </div>
         <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
-          <div class="text-4xl font-bold gold-text">$10M+</div>
-          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Funding Available</div>
+          <div class="text-4xl font-bold gold-text">6</div>
+          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Core Credit Repair Services</div>
         </div>
         <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
           <div class="text-4xl font-bold gold-text">24-48</div>
-          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Hours To Fund</div>
+          <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Hours To Review</div>
         </div>
       </div>
     </section>
@@ -292,29 +294,29 @@
     <section class="section-shell px-4 py-20">
       <div class="mx-auto max-w-7xl">
         <div class="reveal max-w-3xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Four Simple Steps To Funding</div>
-          <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">A proven process designed for speed, clarity, and the right fit.</h2>
+          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Four Simple Steps</div>
+          <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">A clear path from credit repair to stronger funding opportunities.</h2>
         </div>
         <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           <article class="reveal card-border glass rounded-[2rem] p-7">
             <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">1</div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Apply Online</h3>
-            <p class="mt-4 text-sm leading-7 text-white/64">Fill out our streamlined application and tell us about your business goals, timing, and capital needs.</p>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Free Consultation</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Tell us about your credit situation, goals, business plans, and what is standing in the way right now.</p>
           </article>
           <article class="reveal card-border glass rounded-[2rem] p-7">
             <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">2</div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Meet Your Advisor</h3>
-            <p class="mt-4 text-sm leading-7 text-white/64">Your advisor reviews your profile, explains options, and aligns solutions with your business model.</p>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Credit Analysis</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">We review your reports, identify errors, and map the highest-impact opportunities to strengthen your profile.</p>
           </article>
           <article class="reveal card-border glass rounded-[2rem] p-7">
             <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">3</div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Customized Plan</h3>
-            <p class="mt-4 text-sm leading-7 text-white/64">Receive competitive offers, flexible terms, and a strategic recommendation built around your use case.</p>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Strategic Repair</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Our team disputes inaccurate items, guides your next moves, and builds a practical strategy around long-term results.</p>
           </article>
           <article class="reveal card-border glass rounded-[2rem] p-7">
             <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">4</div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Get Funded</h3>
-            <p class="mt-4 text-sm leading-7 text-white/64">Move through closing quickly and receive capital in as soon as 24 to 48 hours once approved.</p>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Results &amp; Funding</h3>
+            <p class="mt-4 text-sm leading-7 text-white/64">Watch your credit improve, then access funding solutions when you are ready to move with confidence.</p>
           </article>
         </div>
       </div>
@@ -335,7 +337,30 @@
           <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Restaurants</h3><p class="mt-3 text-sm leading-7 text-white/62">Support for renovations, second locations, equipment purchases, and cash flow stability.</p></article>
           <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Landscaping</h3><p class="mt-3 text-sm leading-7 text-white/62">Financing for seasonal growth, crews, trucks, trailers, and commercial contracts.</p></article>
           <article class="reveal rounded-[2rem] border border-white/10 bg-white/[0.03] p-6"><h3 class="text-xl font-semibold text-white">Consultants</h3><p class="mt-3 text-sm leading-7 text-white/62">Working capital for hiring, delivery capacity, technology upgrades, and expansion.</p></article>
-          <article class="reveal rounded-[2rem] border border-dashed border-softgold/35 bg-gradient-to-br from-[#17140b] to-[#101010] p-6"><h3 class="text-xl font-semibold text-white">Don't See Your Industry?</h3><p class="mt-3 text-sm leading-7 text-white/62">That is okay. There is a strong chance we have already helped businesses in your space secure funding.</p></article>
+          <article class="reveal rounded-[2rem] border border-dashed border-softgold/35 bg-gradient-to-br from-[#151515] to-[#101010] p-6"><h3 class="text-xl font-semibold text-white">Don't See Your Industry?</h3><p class="mt-3 text-sm leading-7 text-white/62">That is okay. There is a strong chance we have already helped businesses in your space secure funding.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="credit-repair-services" class="section-shell px-4 py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-3xl">
+            <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Credit Repair Services</div>
+            <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Targeted services built to clean up reports, strengthen scores, and prepare you for better financial options.</h2>
+          </div>
+          <div class="rounded-[1.5rem] border border-softgold/25 bg-white/[0.03] px-6 py-4 text-sm text-white/66">
+            <div class="font-semibold text-white">Personalized Strategy</div>
+            <div class="mt-1">Built around your current credit profile and long-term goals</div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Credit Report Analysis</h3><p class="mt-4 text-sm leading-7 text-white/64">Comprehensive reviews of your reports to identify inaccurate items, outdated accounts, and the best opportunities for improvement.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Dispute Filing &amp; Management</h3><p class="mt-4 text-sm leading-7 text-white/64">Structured dispute support designed to challenge questionable reporting and keep your case organized from start to finish.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Credit Score Optimization</h3><p class="mt-4 text-sm leading-7 text-white/64">Guidance on utilization, payment behavior, account mix, and other factors that influence score growth over time.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Debt Management Strategy</h3><p class="mt-4 text-sm leading-7 text-white/64">Practical recommendations to prioritize balances, reduce pressure, and improve the overall health of your profile.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Credit Monitoring</h3><p class="mt-4 text-sm leading-7 text-white/64">Consistent tracking to measure progress, catch changes quickly, and keep your repair plan moving in the right direction.</p></article>
+          <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Identity Theft Protection</h3><p class="mt-4 text-sm leading-7 text-white/64">Support for protecting your profile against suspicious activity so your rebuilding efforts are not undermined.</p></article>
         </div>
       </div>
     </section>
@@ -345,11 +370,11 @@
         <div class="reveal flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div class="max-w-3xl">
             <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Funding Products</div>
-            <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Access over 5000+ different lending products and strategic funding solutions.</h2>
+            <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">Once your credit is in shape, access funding solutions across a broad lender network built for growth.</h2>
           </div>
           <div class="rounded-[1.5rem] border border-softgold/25 bg-white/[0.03] px-6 py-4 text-sm text-white/66">
-            <div class="font-semibold text-white">Check Your Eligibility</div>
-            <div class="mt-1">*700+ credit score required</div>
+            <div class="font-semibold text-white">Funding Readiness</div>
+            <div class="mt-1">Explore strategic options when your profile and timing align</div>
           </div>
         </div>
         <div class="mt-12 grid gap-5 lg:grid-cols-2">
@@ -363,7 +388,7 @@
           <article class="reveal card-border glass rounded-[2rem] p-7"><h3 class="text-2xl font-semibold text-white">Real Estate / DSCR Loans</h3><p class="mt-3 text-sm uppercase tracking-[0.24em] text-softgold">Investor-focused structures</p><p class="mt-4 text-sm leading-7 text-white/64">Solutions for investment properties, DSCR-based approvals, bridge deals, rental portfolios, and time-sensitive closings.</p></article>
         </div>
         <div class="mt-10">
-          <a href="#apply" class="gold-gradient inline-flex rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-black">Check Your Eligibility</a>
+          <a href="#apply" class="gold-gradient inline-flex rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-black">Start Your Credit Repair Journey</a>
         </div>
       </div>
     </section>
@@ -428,8 +453,8 @@
         <div class="grid gap-8 lg:grid-cols-[0.88fr_1.12fr]">
           <div class="reveal card-border glass rounded-[2rem] p-8 sm:p-10">
             <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Apply Now</div>
-            <h2 class="mt-5 font-display text-4xl font-bold text-white">Check your eligibility with one application.</h2>
-            <p class="mt-5 text-lg leading-8 text-white/64">Platinum Solutions Inc helps business owners compare options across a broad lending network without wasting time on fragmented applications.</p>
+            <h2 class="mt-5 font-display text-4xl font-bold text-white">Start Your Credit Repair Journey</h2>
+            <p class="mt-5 text-lg leading-8 text-white/64">Platinum Solutions Inc helps clients understand their credit profile, create a repair strategy, and prepare for funding opportunities without wasting time on fragmented next steps.</p>
             <div class="mt-10 space-y-5 text-sm text-white/64">
               <div class="flex items-start gap-4">
                 <div class="gold-gradient mt-1 flex h-10 w-10 items-center justify-center rounded-2xl text-black"><i data-lucide="phone" class="h-5 w-5"></i></div>
@@ -445,14 +470,13 @@
           <div class="reveal card-border glass rounded-[2rem] p-8 sm:p-10">
             <form class="grid gap-5 sm:grid-cols-2" action="#" method="post">
               <div class="sm:col-span-2">
-                <label class="mb-2 block text-sm font-medium text-white/70" for="amount">How Much Money Do You Need*</label>
-                <select id="amount" name="amount" class="field" required>
+                <label class="mb-2 block text-sm font-medium text-white/70" for="primary-goal">What Do You Need Help With First?*</label>
+                <select id="primary-goal" name="primary_goal" class="field" required>
                   <option value="">Choose one</option>
-                  <option>$10,000 - $50,000</option>
-                  <option>$50,000 - $100,000</option>
-                  <option>$100,000 - $250,000</option>
-                  <option>$250,000 - $500,000</option>
-                  <option>$500,000+</option>
+                  <option>Credit repair</option>
+                  <option>Credit repair and future funding</option>
+                  <option>Business funding after improving credit</option>
+                  <option>Not sure yet, I need guidance</option>
                 </select>
               </div>
               <div class="sm:col-span-2">
@@ -468,26 +492,31 @@
                 <input id="phone" name="phone" class="field" type="tel" placeholder="(555) 555-5555" required>
               </div>
               <div>
-                <label class="mb-2 block text-sm font-medium text-white/70" for="credit-score">Credit Score*</label>
+                <label class="mb-2 block text-sm font-medium text-white/70" for="credit-score">Estimated Credit Score*</label>
                 <select id="credit-score" name="credit_score" class="field" required>
                   <option value="">Choose one</option>
                   <option>700+</option>
                   <option>660-699</option>
                   <option>620-659</option>
                   <option>Below 620</option>
+                  <option>I'm not sure</option>
                 </select>
               </div>
               <div>
                 <label class="mb-2 block text-sm font-medium text-white/70" for="address">Business Address*</label>
                 <input id="address" name="address" class="field" type="text" placeholder="Street, City, State" required>
               </div>
+              <div class="sm:col-span-2">
+                <label class="mb-2 block text-sm font-medium text-white/70" for="notes">Tell Us About Your Situation</label>
+                <textarea id="notes" name="notes" class="field min-h-[140px] resize-y" placeholder="Share what you want to repair, what goals you have, and whether you plan to seek funding next."></textarea>
+              </div>
               <label class="sm:col-span-2 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm leading-7 text-white/62">
                 <input type="checkbox" name="sms_consent" class="mt-1 h-4 w-4 rounded border-white/20 bg-transparent text-gold focus:ring-gold" required>
-                <span>I agree to receive SMS and email communications from Platinum Solutions Inc regarding my funding inquiry, application updates, and related services.</span>
+                <span>I agree to receive SMS and email communications from Platinum Solutions Inc regarding my credit repair inquiry, application updates, and related services.</span>
               </label>
               <div class="sm:col-span-2">
-                <button type="submit" class="gold-gradient w-full rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-black shadow-glow">Check Eligibility</button>
-                <p class="mt-4 text-center text-sm text-white/52">Applying is free and will not impact your credit. *700+ credit score required</p>
+                <button type="submit" class="gold-gradient w-full rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-black shadow-glow">Get Your Free Consultation</button>
+                <p class="mt-4 text-center text-sm text-white/52">Submitting this form is free and will not impact your credit.</p>
               </div>
             </form>
           </div>
@@ -500,13 +529,14 @@
     <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr]">
       <div>
         <div class="flex items-center gap-3">
+          <!-- LOGO: Replace this div with <img> when Cole provides logo -->
           <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-full text-base font-extrabold text-black">PS</div>
           <div>
             <div class="font-display text-xl font-bold tracking-[0.12em] text-white">Platinum Solutions Inc</div>
-            <div class="text-xs uppercase tracking-[0.3em] text-white/46">Business Funding &amp; Credit Repair</div>
+            <div class="text-xs uppercase tracking-[0.3em] text-white/46">Credit Repair &amp; Business Funding</div>
           </div>
         </div>
-        <p class="mt-6 max-w-md text-sm leading-7 text-white/58">Strategic funding guidance, streamlined applications, and access to a broad lender network built to help businesses grow with confidence.</p>
+        <p class="mt-6 max-w-md text-sm leading-7 text-white/58">Strategic credit repair guidance, streamlined next steps, and access to a broad lender network built to help businesses grow with confidence.</p>
         <div class="mt-6 space-y-2 text-sm text-white/62">
           <div>Cole | +1 (815) 280-3370</div>
           <div>jcole.boban@gmail.com</div>
@@ -531,6 +561,7 @@
         <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-softgold">Company</h3>
         <ul class="mt-5 space-y-3 text-sm text-white/58">
           <li><a href="#home" class="transition hover:text-white">Home</a></li>
+          <li><a href="#credit-repair-services" class="transition hover:text-white">Credit Repair</a></li>
           <li><a href="#industries" class="transition hover:text-white">Industries</a></li>
           <li><a href="#success-stories" class="transition hover:text-white">Success Stories</a></li>
           <li><a href="#apply" class="transition hover:text-white">Apply Now</a></li>
@@ -539,7 +570,7 @@
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-softgold">Resources</h3>
         <ul class="mt-5 space-y-3 text-sm text-white/58">
-          <li><a href="#apply" class="transition hover:text-white">Get a Quote Today</a></li>
+          <li><a href="#apply" class="transition hover:text-white">Get a Free Consultation</a></li>
           <li><a href="#" class="transition hover:text-white">Privacy Policy</a></li>
           <li><a href="#" class="transition hover:text-white">Accessibility Statement</a></li>
           <li><a href="mailto:jcole.boban@gmail.com" class="transition hover:text-white">Contact Us</a></li>
