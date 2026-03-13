@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Platinum Solutions Inc | Credit Repair &amp; Business Funding</title>
   <meta name="description" content="Platinum Solutions Inc provides expert credit repair solutions to rebuild your financial future, plus access to 300+ lenders for business funding when you are ready to grow.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/png" href="logo-transparent.png">
+  <link rel="apple-touch-icon" href="logo-transparent.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
@@ -17,9 +20,9 @@
             background: '#0a0a0a',
             card: '#111111',
             secondary: 'rgba(255,255,255,0.05)',
-            gold: '#C0C0C0',
-            softgold: '#D4D4D8',
-            deepgold: '#71717A'
+            platinum: '#E8E9EA',
+            silver: '#C3C6C8',
+            graphite: '#1C1C1D'
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -38,8 +41,11 @@
       --card: #111111;
       --secondary: rgba(255, 255, 255, 0.05);
       --border: rgba(255, 255, 255, 0.1);
-      --text-muted: rgba(255, 255, 255, 0.72);
-      --gold-gradient: linear-gradient(135deg, #C0C0C0 0%, #E4E4E7 25%, #A1A1AA 50%, #71717A 100%);
+      --text-muted: #C3C6C8;
+      --chrome-highlight: #E8E9EA;
+      --chrome-mid: #C3C6C8;
+      --chrome-deep: #1C1C1D;
+      --chrome-gradient: linear-gradient(135deg, #C0C0C0 0%, #E8E9EA 25%, #9BA0A3 50%, #6B6D70 100%);
     }
 
     html {
@@ -48,19 +54,19 @@
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(192, 192, 192, 0.12), transparent 24%),
-        radial-gradient(circle at top right, rgba(212, 212, 216, 0.08), transparent 18%),
+        radial-gradient(circle at top left, rgba(232, 233, 234, 0.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(155, 160, 163, 0.1), transparent 18%),
         linear-gradient(180deg, #0a0a0a 0%, #0c0c0c 35%, #090909 100%);
       color: #fff;
       font-family: 'Inter', sans-serif;
     }
 
-    .gold-gradient {
-      background: var(--gold-gradient);
+    .chrome-gradient {
+      background: var(--chrome-gradient);
     }
 
-    .gold-text {
-      background: var(--gold-gradient);
+    .chrome-text {
+      background: var(--chrome-gradient);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -92,7 +98,7 @@
       inset: auto -10% -30% auto;
       width: 26rem;
       height: 26rem;
-      background: radial-gradient(circle, rgba(192, 192, 192, 0.16), transparent 68%);
+      background: radial-gradient(circle, rgba(232, 233, 234, 0.18), transparent 68%);
       filter: blur(16px);
       pointer-events: none;
     }
@@ -118,7 +124,7 @@
       inset: 0;
       padding: 1px;
       border-radius: inherit;
-      background: linear-gradient(145deg, rgba(212, 212, 216, 0.28), rgba(255,255,255,0.08), rgba(161, 161, 170, 0.24));
+      background: linear-gradient(145deg, rgba(232, 233, 234, 0.34), rgba(255,255,255,0.08), rgba(107, 109, 112, 0.34));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -137,8 +143,8 @@
     }
 
     .field:focus {
-      border-color: rgba(212, 212, 216, 0.65);
-      box-shadow: 0 0 0 4px rgba(192, 192, 192, 0.12);
+      border-color: rgba(232, 233, 234, 0.65);
+      box-shadow: 0 0 0 4px rgba(232, 233, 234, 0.12);
       background: rgba(255, 255, 255, 0.06);
     }
 
@@ -156,19 +162,37 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .brand-logo {
+      width: auto;
+      max-height: 54px;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .nav-panel {
+      background: linear-gradient(180deg, rgba(17, 17, 17, 0.98), rgba(9, 9, 9, 0.94));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    @media (max-width: 640px) {
+      .brand-logo {
+        max-height: 48px;
+      }
+    }
   </style>
 </head>
-<body class="bg-background selection:bg-gold/30 selection:text-white">
+<body class="bg-background selection:bg-platinum/30 selection:text-black">
   <div class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
     <header class="glass mx-auto max-w-7xl rounded-full">
       <div class="flex items-center justify-between gap-6 px-6 py-4 lg:px-8">
-        <a href="#home" class="flex items-center gap-3">
-          <!-- LOGO: Replace this div with <img> when Cole provides logo -->
-          <div class="gold-gradient flex h-11 w-11 items-center justify-center rounded-full text-base font-extrabold text-black">PS</div>
-          <div>
-            <div class="font-display text-lg font-bold tracking-[0.16em] text-white">PLATINUM SOLUTIONS</div>
-            <div class="text-xs uppercase tracking-[0.28em] text-white/50">Credit Repair &amp; Funding</div>
-          </div>
+        <a href="#home" class="flex items-center">
+          <img src="logo-with-text-transparent.png" alt="Platinum Solutions Inc" class="brand-logo">
         </a>
         <nav class="hidden items-center gap-8 text-sm font-medium text-white/72 lg:flex">
           <a href="#home" class="transition hover:text-white">Home</a>
@@ -178,7 +202,22 @@
           <a href="#success-stories" class="transition hover:text-white">Success Stories</a>
           <a href="#apply" class="transition hover:text-white">Apply Now</a>
         </nav>
-        <a href="#apply" class="gold-gradient hidden rounded-full px-5 py-3 text-sm font-semibold text-black shadow-glow transition hover:scale-[1.02] lg:inline-flex">Free Consultation</a>
+        <div class="flex items-center gap-3">
+          <a href="#apply" class="chrome-gradient hidden rounded-full px-5 py-3 text-sm font-semibold text-black shadow-glow transition hover:scale-[1.02] lg:inline-flex">Free Consultation</a>
+          <button id="mobile-menu-button" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="nav-panel mx-4 mb-4 hidden rounded-[1.75rem] p-4 lg:hidden">
+        <nav class="flex flex-col gap-2 text-sm font-medium text-white/78">
+          <a href="#home" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-white">Home</a>
+          <a href="#credit-repair-services" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-white">Credit Repair</a>
+          <a href="#funding-products" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-white">Funding Products</a>
+          <a href="#industries" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-white">Industries</a>
+          <a href="#success-stories" class="rounded-2xl px-4 py-3 transition hover:bg-white/5 hover:text-white">Success Stories</a>
+          <a href="#apply" class="chrome-gradient mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 font-semibold text-black">Free Consultation</a>
+        </nav>
       </div>
     </header>
   </div>
@@ -189,20 +228,20 @@
       <div class="mx-auto max-w-7xl">
         <div class="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
           <div class="reveal relative z-10">
-            <div class="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-softgold">
+            <div class="mb-5 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-silver">
               Your Guides From Repair To Funding
             </div>
             <h1 class="font-display max-w-4xl text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
-              Reimagine The Way You <span class="gold-text">Build Your Credit</span>
+              Reimagine The Way You <span class="chrome-text">Build Your Credit</span>
             </h1>
             <p class="mt-6 max-w-2xl text-lg leading-8 text-white/68">
               Expert credit repair solutions to rebuild your financial future. Plus, access 300+ lenders for business funding when you need it. Platinum Solutions Inc helps you fix your credit and grow your business.
             </p>
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#apply" class="gold-gradient inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black shadow-glow">
+              <a href="#apply" class="chrome-gradient inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black shadow-glow">
                 Start Your Journey
               </a>
-              <a href="#credit-repair-services" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-softgold/50 hover:bg-white/8">
+              <a href="#credit-repair-services" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-silver/50 hover:bg-white/8">
                 Explore Services
               </a>
             </div>
@@ -212,17 +251,17 @@
             <div class="card-border glass rounded-[2rem] p-7 sm:p-8">
               <div class="mb-8 flex items-center justify-between">
                 <div>
-                  <div class="text-xs font-semibold uppercase tracking-[0.3em] text-softgold">Credit Repair &amp; Funding Solutions</div>
+                  <div class="text-xs font-semibold uppercase tracking-[0.3em] text-silver">Credit Repair &amp; Funding Solutions</div>
                   <h2 class="mt-3 font-display text-3xl font-bold text-white">Build A Stronger Financial Profile</h2>
                 </div>
-                <div class="gold-gradient rounded-2xl p-3 text-black shadow-glow">
+                <div class="chrome-gradient rounded-2xl p-3 text-black shadow-glow">
                   <i data-lucide="shield-check" class="h-7 w-7"></i>
                 </div>
               </div>
               <div class="space-y-4">
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <div class="flex items-center gap-4">
-                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                    <div class="chrome-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
                       <i data-lucide="file-search" class="h-6 w-6"></i>
                     </div>
                     <div>
@@ -233,7 +272,7 @@
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <div class="flex items-center gap-4">
-                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                    <div class="chrome-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
                       <i data-lucide="eye" class="h-6 w-6"></i>
                     </div>
                     <div>
@@ -244,7 +283,7 @@
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <div class="flex items-center gap-4">
-                    <div class="gold-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
+                    <div class="chrome-gradient flex h-12 w-12 items-center justify-center rounded-2xl text-black">
                       <i data-lucide="landmark" class="h-6 w-6"></i>
                     </div>
                     <div>
@@ -254,14 +293,14 @@
                   </div>
                 </div>
               </div>
-              <div class="mt-8 rounded-2xl border border-softgold/25 bg-gradient-to-r from-[#151515] to-[#101010] p-5">
+              <div class="mt-8 rounded-2xl border border-silver/25 bg-gradient-to-r from-[#151515] to-[#101010] p-5">
                 <div class="flex items-center justify-between gap-4">
                   <div>
-                    <div class="text-sm uppercase tracking-[0.24em] text-softgold">Direct Contact</div>
+                    <div class="text-sm uppercase tracking-[0.24em] text-silver">Direct Contact</div>
                     <div class="mt-2 text-base font-semibold text-white">Cole | +1 (815) 280-3370</div>
                     <div class="mt-1 text-sm text-white/65">jcole.boban@gmail.com</div>
                   </div>
-                  <a href="#apply" class="gold-gradient rounded-full px-5 py-3 text-sm font-semibold text-black">Free Consultation</a>
+                  <a href="#apply" class="chrome-gradient rounded-full px-5 py-3 text-sm font-semibold text-black">Free Consultation</a>
                 </div>
               </div>
             </div>
@@ -273,19 +312,19 @@
     <section class="px-4 pb-20">
       <div class="mx-auto grid max-w-7xl gap-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 sm:grid-cols-2 xl:grid-cols-4">
         <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
-          <div class="text-4xl font-bold gold-text">300+</div>
+          <div class="text-4xl font-bold chrome-text">300+</div>
           <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Lending Partners</div>
         </div>
         <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
-          <div class="text-4xl font-bold gold-text">5000+</div>
+          <div class="text-4xl font-bold chrome-text">5000+</div>
           <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Financial Products</div>
         </div>
         <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
-          <div class="text-4xl font-bold gold-text">6</div>
+          <div class="text-4xl font-bold chrome-text">6</div>
           <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Core Credit Repair Services</div>
         </div>
         <div class="reveal rounded-[1.5rem] border border-white/8 bg-black/20 p-6">
-          <div class="text-4xl font-bold gold-text">24-48</div>
+          <div class="text-4xl font-bold chrome-text">24-48</div>
           <div class="mt-2 text-sm uppercase tracking-[0.24em] text-white/48">Hours To Review</div>
         </div>
       </div>
@@ -294,27 +333,27 @@
     <section class="section-shell px-4 py-20">
       <div class="mx-auto max-w-7xl">
         <div class="reveal max-w-3xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-softgold">Four Simple Steps</div>
+          <div class="text-sm font-semibold uppercase tracking-[0.3em] text-silver">Four Simple Steps</div>
           <h2 class="mt-5 font-display text-4xl font-bold text-white sm:text-5xl">A clear path from credit repair to stronger funding opportunities.</h2>
         </div>
         <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           <article class="reveal card-border glass rounded-[2rem] p-7">
-            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">1</div>
+            <div class="chrome-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">1</div>
             <h3 class="mt-6 text-2xl font-semibold text-white">Free Consultation</h3>
             <p class="mt-4 text-sm leading-7 text-white/64">Tell us about your credit situation, goals, business plans, and what is standing in the way right now.</p>
           </article>
           <article class="reveal card-border glass rounded-[2rem] p-7">
-            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">2</div>
+            <div class="chrome-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">2</div>
             <h3 class="mt-6 text-2xl font-semibold text-white">Credit Analysis</h3>
             <p class="mt-4 text-sm leading-7 text-white/64">We review your reports, identify errors, and map the highest-impact opportunities to strengthen your profile.</p>
           </article>
           <article class="reveal card-border glass rounded-[2rem] p-7">
-            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">3</div>
+            <div class="chrome-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">3</div>
             <h3 class="mt-6 text-2xl font-semibold text-white">Strategic Repair</h3>
             <p class="mt-4 text-sm leading-7 text-white/64">Our team disputes inaccurate items, guides your next moves, and builds a practical strategy around long-term results.</p>
           </article>
           <article class="reveal card-border glass rounded-[2rem] p-7">
-            <div class="gold-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">4</div>
+            <div class="chrome-gradient inline-flex h-14 w-14 items-center justify-center rounded-2xl text-lg font-bold text-black">4</div>
             <h3 class="mt-6 text-2xl font-semibold text-white">Results &amp; Funding</h3>
             <p class="mt-4 text-sm leading-7 text-white/64">Watch your credit improve, then access funding solutions when you are ready to move with confidence.</p>
           </article>
